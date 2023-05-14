@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="reset.css" />
+</head>
+
+<body>
+	<header>
+		<h1 class="logo">MarsTick</h1>
+		<nav class="navigation">
+			<a href="#">Home</a>
+			<a href="#">About</a>
+			<a href="#">Services</a>
+			<a href="#">Contact</a>
+			<button class="btnLogin-popup">Login</button>
+		</nav>
+	</header>
+
+	<!-- <div class="wrapper">
+		<div class="form-box login">
+			<h2>Login</h2>
+			<form action="#">
+				<div class="input-box">
+					<span class="icon"><i class="bi bi-envelope-fill"></i></span>
+					<input type="email" required>
+					<label>Email</label>
+				</div>
+				<div class="input-box">
+					<span class="icon"><i class="bi bi-lock-fill"></i></span>
+					<input type="password" required>
+					<label>Password</label>
+				</div>
+				<div class="remember-forgot">
+					<label><input type="checkbox">Remember me</label>
+					<a href="#">Forgot Password?</a>
+				</div>
+				<button type="submit" class="btn">Login</button>
+				<div class="login-register">
+					<p>Don't have an account? 
+						<a href="#" class="register-link">Register</a></p>
+				</div>
+			</form>
+		</div>
+	</div> -->
+
+	<div class="main-form">
+		<form class="form">
+			<h3 class="way">Where are you going?</h3>
+		
+			
+
+			<div class="input-container">
+				<div class="form-container">
+					<label for="start-station"></label>
+					<input type="text" name="start-station" id="station" class="input-form station" placeholder="From "
+						onkeyup="selecStation(this.value)" />
+					<select id="txtHint" size="4" style="display: none"></select>
+					<i class="bi bi-arrow-right"></i>
+				</div>
+
+				<label for="date"></label>
+				<input type="text" name="date" class="input-form date" placeholder="To " />
+				<label for="final-station"></label>
+				<input type="date" name="final-station" class="input-form station" min="2023-05-08" />
+			</div>
+
+			<div>
+				<label for="return-way" class="way">Way back</label>
+				<input type="checkbox" name="return-way" id="wayBack" />
+			</div>
+
+			<div class="input-container back" >
+				<div class="form-container">
+					<label for="start-station"></label>
+					<input type="text" name="start-station" id="station" class="input-form station" placeholder="From "
+						onkeyup="selecStation(this.value)" />
+					<select id="txtHint" size="4" style="display: none"></select>
+					<i class="bi bi-arrow-left"></i>
+				</div>
+
+				<label for="date"></label>
+				<input type="text" name="date" class="input-form date" placeholder="To " />
+				<label for="final-station"></label>
+				<input type="date" name="final-station" class="input-form station" min="2023-05-08" />
+			</div>
+
+			<!-- <div class="input-container back">
+					<label for="start-station"></label>
+					<input
+						type="text"
+						name="start-station"
+						class="input-form station"
+						placeholder="From"
+					/>
+					<i class="bi bi-arrow-left"></i>
+					<label for="date"></label>
+					<input
+						type="text"
+						name="date"
+						class="input-form date"
+						placeholder="To"
+					/>
+					<label for="final-station"></label>
+					<input
+						type="date"
+						name="final-station"
+						class="input-form station"
+						id="date"
+					/>
+				</div> -->
+
+
+			<button type="submit" class="search-button">Search</button>
+		</form>
+	</div>
+	<script src="script.js"></script>
+</body>
+
+</html>
