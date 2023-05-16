@@ -1,51 +1,115 @@
 const back = document.querySelector('.back');
 const wayBackChange = document.getElementById('wayBack');
+const inputFormElement = document.getElementById('start-station');
+const selectStation = document.getElementById('selectStation');
 
+inputFormElement.addEventListener('input', function () {
+	const inputValue = inputFormElement.value;
+	selectStation.value = inputValue;
+})
 
+selectStation.addEventListener('change', function () {
+	const selectedValue = selectStation.value;
+	inputFormElement.value = selectedValue;
+})
+
+// console.log("selectStation ", selectStation);
+
+// console.log('Input:', inputElement.value);
+
+// show back way
 wayBackChange.addEventListener('click', showBaclPanel);
 
-console.log('back', back);
+// listening input value
+// inputFromElement.addEventListener('keyup', function (event) {
+// 	const inputValue = event.target.value;
+//   });
+
+// select station
+// selectStation.addEventListener('change', function (event) {
+// 	console.log('Selected option:', event.target.value);
+// 	inputFromElement.value = event.target.value;
+//   });
 
 const stations = [
 	{
 		name: 'International Space Station (ISS)',
-		country: 'USA',
+		region: 'USA',
+		planet: "Earth"
 	},
 	{
 		name: 'Chinese Space Station (CSS)',
-		country: 'China',
+		region: 'China',
+		planet: "Earth"
 	},
 	{
 		name: 'Mir Space Station',
-		country: 'Russia',
+		region: 'Russia',
+		planet: "Earth"
 	},
 	{
 		name: 'Salyut Space Station',
-		country: 'Russia',
+		region: 'Russia',
+		planet: "Earth"
 	},
 	{
 		name: 'Soyuz Space Station',
-		country: 'Russia',
+		region: 'Russia',
+		planet: "Earth"
 	},
 	{
 		name: 'Tiangong Space Station',
-		country: 'China',
+		region: 'China',
+		planet: "Earth"
 	},
 	{
 		name: 'Skylab',
-		country: 'USA',
+		region: 'USA',
+		planet: "Earth"
 	},
 	{
 		name: 'SpaceHab',
-		country: 'USA',
+		region: 'USA',
+		planet: "Earth"
 	},
 ];
 
+const stationsMars =[
+	{
+		name: "Curiosity Rover",
+		region: "Gale Crater",
+		planet: "Mars"
+		},
+		
+		{
+		name: "Perseverance Rover",
+		region: "Jezero Crater",
+		planet: "Mars"
+		},
+		
+		{
+		name: "InSight Lander",
+		region: "Elysium Planitia",
+		planet: "Mars"
+		},
+		
+		{
+		name: "Spirit Rover",
+		region: "Gusev Crater",
+		planet: "Mars"
+		},
+		
+		{
+		name: "Opportunity Rover",
+		region: "Meridiani Planum",
+		planet: "Mars"
+		}
+]
 
 
 // for date input
 const today = new Date().toISOString().split('T')[0];
-document.getElementById('date').setAttribute('min', today);
+document.getElementById('date').setAttribute('min', today)
 
 function showBaclPanel(){
 	// console.log("change")
@@ -54,9 +118,11 @@ function showBaclPanel(){
 		: (back.style.display = 'flex');
 };
 
-function selecStation(str) {
+// function selecStation(str) {
 	
-}
+// }
+
+
 // function showHint(str) {
 // 	var hint = '';
 // 	if (str.length > 0) {

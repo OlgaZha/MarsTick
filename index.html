@@ -8,8 +8,8 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
 	<link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet" />
-	<link rel="stylesheet" href="style.css" />
 	<link rel="stylesheet" href="reset.css" />
+	<link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -54,22 +54,25 @@
 	<div class="main-form">
 		<form class="form">
 			<h3 class="way">Where are you going?</h3>
-		
-			
 
 			<div class="input-container">
 				<div class="form-container">
 					<label for="start-station"></label>
-					<input type="text" name="start-station" id="station" class="input-form station" placeholder="From "
-						onkeyup="selecStation(this.value)" />
-					<select id="txtHint" size="4" style="display: none"></select>
+					<input type="text" name="start-station" id="start-station" class="input-form station"
+						placeholder="From " onkeyup="selecStation(this.value)" autocomplete="off" />
+					<label for="selectStation"></label>
+					<select name="choice" id="selectStation" size="4" class="select-stations">
+						<!-- iteration stations -->
+						<option value="USA">{name},{region},{planet}</option>
+						<option value="Ukraine">Ukraine</option>
+					</select>
 					<i class="bi bi-arrow-right"></i>
 				</div>
 
 				<label for="date"></label>
 				<input type="text" name="date" class="input-form date" placeholder="To " />
 				<label for="final-station"></label>
-				<input type="date" name="final-station" class="input-form station" min="2023-05-08" />
+				<input type="date" name="final-station" class="input-form station" id="date" min="2023-05-13" />
 			</div>
 
 			<div>
@@ -77,7 +80,7 @@
 				<input type="checkbox" name="return-way" id="wayBack" />
 			</div>
 
-			<div class="input-container back" >
+			<div class="input-container back">
 				<div class="form-container">
 					<label for="start-station"></label>
 					<input type="text" name="start-station" id="station" class="input-form station" placeholder="From "

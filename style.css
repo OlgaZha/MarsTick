@@ -216,7 +216,21 @@ select{
     cursor: pointer;
 }
 
-#txtHint {
+.station:focus {
+    background-color: black;
+}
+
+.select-stations {
+    display: none;
+}
+
+.station:focus + .select-stations{
+    display: block;
+    background-color: black;
+}
+
+
+#selectStation {
     position: absolute;
     top: 45px;
     right: 31px;
