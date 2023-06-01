@@ -24,55 +24,51 @@
 		</nav>
 	</header>
 
-	<!-- <div class="wrapper">
-		<div class="form-box login">
-			<h2>Login</h2>
-			<form action="#">
-				<div class="input-box">
-					<span class="icon"><i class="bi bi-envelope-fill"></i></span>
-					<input type="email" required>
-					<label>Email</label>
-				</div>
-				<div class="input-box">
-					<span class="icon"><i class="bi bi-lock-fill"></i></span>
-					<input type="password" required>
-					<label>Password</label>
-				</div>
-				<div class="remember-forgot">
-					<label><input type="checkbox">Remember me</label>
-					<a href="#">Forgot Password?</a>
-				</div>
-				<button type="submit" class="btn">Login</button>
-				<div class="login-register">
-					<p>Don't have an account? 
-						<a href="#" class="register-link">Register</a></p>
-				</div>
-			</form>
-		</div>
-	</div> -->
+	
 
 	<div class="main-form">
+		<div class="light"></div>
 		<form class="form">
 			<h3 class="way">Where are you going?</h3>
 
 			<div class="input-container">
 				<div class="form-container">
 					<label for="start-station"></label>
-					<input type="text" name="start-station" id="start-station" class="input-form station"
-						placeholder="From " onkeyup="selecStation(this.value)" autocomplete="off" />
-					<label for="selectStation"></label>
-					<select name="choice" id="selectStation" size="4" class="select-stations">
-						<!-- iteration stations -->
-						<option value="USA">{name},{region},{planet}</option>
-						<option value="Ukraine">Ukraine</option>
+					<input 
+					type="text" 
+					name="start-station" 
+					id="start-station" 
+					class="input-form "
+					placeholder="From "
+					autocomplete="off" />
+					<select 
+					name="choice"
+					 id="select-station" 
+					 size="4" 
+					 class="select-stations-from"
+					hidden>
 					</select>
 					<i class="bi bi-arrow-right"></i>
 				</div>
-
+				<div class="form-container">
+				<label for="arrival"></label>
+				<input type="text" 
+				name="arrival" 
+				id = "arrival-station"
+				class="input-form " 
+				placeholder="To" 
+				autocomplete="off"/>
+				 <select 
+					name="choice"
+					 id="select-arrival-station" 
+					 size="4" 
+					 class="select-stations-to"
+					hidden>
+				</select> 
+				</div>
+			
 				<label for="date"></label>
-				<input type="text" name="date" class="input-form date" placeholder="To " />
-				<label for="final-station"></label>
-				<input type="date" name="final-station" class="input-form station" id="date" min="2023-05-13" />
+				<input type="date" name="date" class="input-form " id="date" />
 			</div>
 
 			<div>
@@ -80,11 +76,11 @@
 				<input type="checkbox" name="return-way" id="wayBack" />
 			</div>
 
-			<div class="input-container back">
+			<div class="input-container back" id="back">
 				<div class="form-container">
 					<label for="start-station"></label>
 					<input type="text" name="start-station" id="station" class="input-form station" placeholder="From "
-						onkeyup="selecStation(this.value)" />
+					 />
 					<select id="txtHint" size="4" style="display: none"></select>
 					<i class="bi bi-arrow-left"></i>
 				</div>
@@ -95,32 +91,7 @@
 				<input type="date" name="final-station" class="input-form station" min="2023-05-08" />
 			</div>
 
-			<!-- <div class="input-container back">
-					<label for="start-station"></label>
-					<input
-						type="text"
-						name="start-station"
-						class="input-form station"
-						placeholder="From"
-					/>
-					<i class="bi bi-arrow-left"></i>
-					<label for="date"></label>
-					<input
-						type="text"
-						name="date"
-						class="input-form date"
-						placeholder="To"
-					/>
-					<label for="final-station"></label>
-					<input
-						type="date"
-						name="final-station"
-						class="input-form station"
-						id="date"
-					/>
-				</div> -->
-
-
+		
 			<button type="submit" class="search-button">Search</button>
 		</form>
 	</div>
